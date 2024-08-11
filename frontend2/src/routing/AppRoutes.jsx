@@ -1,0 +1,21 @@
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Home from '../pages/Home';
+import Studydoc from '../pages/studydoc';
+import Blog from '../pages/Blog';
+import About from '../pages/About';
+import Login from '../pages/LoginPage';
+
+const AppRoutes = () => {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/studydoc" element={<Studydoc />} />
+      <Route path="/Blog" element={<Blog />} />
+      <Route path="/About" element={<About />} />
+      <Route path="/LoginPage" element={<Login />} />
+    </Routes>
+  );
+};
+
+export default AppRoutes;
