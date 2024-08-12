@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Button from './button'; // Import the Button component
 
 const Navbar = () => {
   return (
@@ -28,11 +29,8 @@ const Navbar = () => {
 
         {/* Login Button */}
         <div className="flex space-x-4">
-          <Link
-            to="/login"
-            className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-          >
-            Login
+          <Link to="/LoginPage">
+            <Button label="Login" className="bg-blue-500 hover:bg-blue-600" />
           </Link>
         </div>
       </div>
@@ -41,4 +39,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-      
