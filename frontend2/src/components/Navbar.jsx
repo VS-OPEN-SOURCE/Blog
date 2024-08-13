@@ -1,42 +1,45 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Button from './button'; // Import the Button component
+import Button from './Button';
+import PropTypes from 'prop-types';
 
-const Navbar = () => {
+const Navbar = ({ isAuthenticated, onLogout }) => {
   return (
     <nav className="bg-gray-800 p-4">
       <div className="container mx-auto flex justify-between items-center">
-        {/* Brand */}
         <div className="text-white text-lg font-bold">
           <Link to="/">Brand</Link>
         </div>
 
-        {/* Navigation Links */}
         <div className="hidden md:flex space-x-6">
-          <Link to="/" className="text-gray-300 hover:text-white">
-            Home
-          </Link>
-          <Link to="/studydoc" className="text-gray-300 hover:text-white">
-            Study Doc
-          </Link>
-          <Link to="/Blog" className="text-gray-300 hover:text-white">
-            Blog
-          </Link>
-          <Link to="/About" className="text-gray-300 hover:text-white">
-            About
-          </Link>
+          <Link to="/" className="text-gray-300 hover:text-white">Home</Link>
+          <Link to="/studydoc" className="text-gray-300 hover:text-white">Study Doc</Link>
+          <Link to="/Blog" className="text-gray-300 hover:text-white">Blog</Link>
+          <Link to="/About" className="text-gray-300 hover:text-white">About</Link>
         </div>
 
-        {/* Login Button */}
         <div className="flex space-x-4">
-          <Link to="/LoginPage">
-            <Button label="Login" className="bg-blue-500 hover:bg-blue-600" />
-          </Link>
+          {isAuthenticated ? (
+            <Button
+              label="Logout"
+              className="bg-red-500 hover:bg-red-600"
+              onClick={onLogout}
+            />
+          ) : (
+            <Link to="/LoginPage">
+              <Button label="Login" className="bg-blue-500 hover:bg-blue-600" />
+            </Link>
+          )}
         </div>
       </div>
     </nav>
   );
+};
+
+Navbar.propTypes = {
+  isAuthenticated: PropTypes.bool.isRequired,
+  onLogout: PropTypes.func.isRequired,
 };
 
 export default Navbar;

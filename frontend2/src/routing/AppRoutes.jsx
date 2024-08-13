@@ -1,8 +1,9 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import Home from '../pages/Home';
-import Studydoc from '../pages/studydoc';
+import Studydoc from '../pages/StudyDoc';
 import Blog from '../pages/Blog';
 import About from '../pages/About';
 import Login from '../pages/LoginPage';
@@ -10,19 +11,23 @@ import SignupPage from '../pages/SignupPage';
 import AdminPage from '../pages/AdminPage';
 import AuthorLoginPage from '../pages/AuthorLoginPage';
 
-const AppRoutes = () => {
+const AppRoutes = ({ onLogin }) => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/studydoc" element={<Studydoc />} />
       <Route path="/Blog" element={<Blog />} />
       <Route path="/About" element={<About />} />
-      <Route path="/LoginPage" element={<Login />} />
+      <Route path="/LoginPage" element={<Login onLogin={onLogin} />} />
       <Route path="/SignupPage" element={<SignupPage />} />
       <Route path="/AdminPage" element={<AdminPage />} />
       <Route path="/AuthorLoginPage" element={<AuthorLoginPage />} />
     </Routes>
   );
+};
+
+AppRoutes.propTypes = {
+  onLogin: PropTypes.func.isRequired,
 };
 
 export default AppRoutes;

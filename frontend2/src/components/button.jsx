@@ -1,6 +1,7 @@
-/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React from 'react';
+import PropTypes from 'prop-types';
+
 const Button = ({ onClick, label, type = 'button', disabled = false, className = '' }) => {
   return (
     <button
@@ -14,5 +15,12 @@ const Button = ({ onClick, label, type = 'button', disabled = false, className =
   );
 };
 
-export default Button;
+Button.propTypes = {
+  onClick: PropTypes.func,
+  label: PropTypes.string.isRequired,
+  type: PropTypes.string,
+  disabled: PropTypes.bool,
+  className: PropTypes.string,
+};
 
+export default Button;

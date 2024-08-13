@@ -1,13 +1,25 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import AppRoutes from '../src/routing/AppRoutes';
+import Navbar from './components/Navbar';
+import AppRoutes from './routing/AppRoutes';
 
 const App = () => {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  const handleLogin = () => {
+    setIsAuthenticated(true);
+  };
+
+  const handleLogout = () => {
+    setIsAuthenticated(false);
+  };
+
   return (
     <Router>
       <div>
-        <AppRoutes />
+        <Navbar isAuthenticated={isAuthenticated} onLogout={handleLogout} />
+        <AppRoutes onLogin={handleLogin} />
       </div>
     </Router>
   );
