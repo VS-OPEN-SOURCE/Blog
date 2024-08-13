@@ -6,8 +6,8 @@ import Studydoc from '../pages/studydoc';
 import Blog from '../pages/Blog';
 import About from '../pages/About';
 import Login from '../pages/LoginPage';
-import SignupPage from '../pages/SignupPage'; // Import SignupPage
-import AdminPage from '../pages/AdminPage'; // Import AdminPage
+import SignupPage from '../pages/SignupPage';
+import AdminPage from '../pages/AdminPage';
 
 const AppRoutes = () => {
   return (
@@ -17,8 +17,8 @@ const AppRoutes = () => {
       <Route path="/Blog" element={<Blog />} />
       <Route path="/About" element={<About />} />
       <Route path="/LoginPage" element={<Login />} />
-      <Route path="/SignupPage" element={<SignupPage />} /> {/* SignupPage route */}
-      <Route path="/AdminPage" element={<AdminPage />} /> {/* AdminPage route */}
+      <Route path="/SignupPage" element={<SignupPage />} />
+      <Route path="/AdminPage" element={<AdminPage />} />
     </Routes>
   );
 };
