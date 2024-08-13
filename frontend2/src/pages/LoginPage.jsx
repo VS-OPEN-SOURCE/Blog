@@ -34,7 +34,7 @@ const LoginPage = () => {
         <h2 className="text-2xl font-bold text-center mb-6">Log In</h2>
         <Form onSubmit={handleSubmit} inputs={inputs} />
         <p className="text-center mt-4 text-blue-500 cursor-pointer hover:underline">
-          <a href="/signup">Don&apos;t have an account? Sign Up</a>
+          <a href="/SignupPage">Don&apos;t have an account? Sign Up</a>
         </p>
       </div>
     </div>

@@ -36,7 +36,7 @@ const SignupPage = () => {
         <h2 className="text-2xl font-bold text-center mb-6">Sign Up</h2>
         <Form onSubmit={handleSubmit} inputs={inputs} />
         <p className="text-center mt-4 text-blue-500 cursor-pointer hover:underline">
-          <a href="/login">Already have an account? Log In</a>
+          <a href="/LoginPage">Already have an account? Log In</a>
         </p>
       </div>
     </div>
