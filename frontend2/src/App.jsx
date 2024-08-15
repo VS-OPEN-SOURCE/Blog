@@ -6,19 +6,22 @@ import AppRoutes from './routing/AppRoutes';
 
 const App = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [username, setUsername] = useState('');
 
-  const handleLogin = () => {
+  const handleLogin = (username) => {
     setIsAuthenticated(true);
+    setUsername(username); // Store the username
   };
 
   const handleLogout = () => {
     setIsAuthenticated(false);
+    setUsername(''); // Clear the username
   };
 
   return (
     <Router>
       <div>
-        <Navbar isAuthenticated={isAuthenticated} onLogout={handleLogout} />
+        <Navbar isAuthenticated={isAuthenticated} onLogout={handleLogout} username={username} />
         <AppRoutes onLogin={handleLogin} />
       </div>
     </Router>

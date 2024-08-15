@@ -19,7 +19,7 @@ const LoginPage = ({ onLogin }) => {
       if (response.status === 200) { // Check if the login was successful
         localStorage.setItem('user', JSON.stringify({ username }));
         alert('Login successful!');
-        onLogin(); // Notify parent component about login status
+        onLogin(username); // Pass the username to the parent component
         navigate('/');
       } else {
         setError('Login failed. Please try again.');
