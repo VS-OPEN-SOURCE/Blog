@@ -20,7 +20,7 @@ const AppRoutes = ({ onLogin }) => {
       <Route path="/Blog" element={<Blog />} />
       <Route path="/About" element={<About />} />
       <Route path="/LoginPage" element={<Login onLogin={onLogin} />} />
-      <Route path="/signup" element={<SignupPage />} />
+      <Route path="/SignupPage" element={<SignupPage />} />
       <Route path="/AdminPage" element={<AdminPage />} />
       <Route path="/AuthorLoginPage" element={<AuthorLoginPage />} />
     </Routes>

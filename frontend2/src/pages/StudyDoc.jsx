@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
 
-const studydoc = () => {
+const StudyDoc = () => {
   return (
     <div>
       STUDT MATERIAL PAGE NEED TO BE DONE
@@ -9,4 +9,4 @@ const studydoc = () => {
   )
 }
 
-export default studydoc
+export default StudyDoc
