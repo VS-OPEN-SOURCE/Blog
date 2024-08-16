@@ -14,7 +14,7 @@ const Navbar = ({ isAuthenticated, onLogout, username }) => {
 
         <div className="hidden md:flex space-x-6">
           <Link to="/" className="text-gray-300 hover:text-white">Home</Link>
-          <Link to="/studydoc" className="text-gray-300 hover:text-white">Study Doc</Link>
+          <Link to="/StudyDoc" className="text-gray-300 hover:text-white">Study Doc</Link>
           <Link to="/Blog" className="text-gray-300 hover:text-white">Blog</Link>
           <Link to="/About" className="text-gray-300 hover:text-white">About</Link>
         </div>
