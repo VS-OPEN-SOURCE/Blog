@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import axios from 'axios';
-import AdminSidebar from './components/adminNav'; // Adjust the path as necessary
+import AdminSidebar from './components/AdminNavbar'; // Adjust the path as necessary
 
 const AdminPage = () => {
     const [username, setUsername] = useState('');
