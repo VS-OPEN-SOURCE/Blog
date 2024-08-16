@@ -7,7 +7,7 @@ const AdminSidebar = () => {
     <div className="w-64 h-screen bg-gray-800 text-white flex flex-col">
       <div className="flex flex-col flex-grow">
         <nav className="flex flex-col mt-4">
-          <Link to="/adminNav" className="px-4 py-2 hover:bg-gray-700">Create Author</Link>
+          <Link to="/AdminPage" className="px-4 py-2 hover:bg-gray-700">Create Author</Link>
           <Link to="/" className="px-4 py-2 hover:bg-gray-700">Create Blog</Link>
           <Link to="/" className="px-4 py-2 hover:bg-gray-700">Study Docs</Link>
           <Link to="/" className="px-4 py-2 hover:bg-gray-700">Donated Docs</Link>
