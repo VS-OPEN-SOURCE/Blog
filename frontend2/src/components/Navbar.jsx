@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Button from './button';
+import Button from './Button';
 import PropTypes from 'prop-types';
 
 const Navbar = ({ isAuthenticated, onLogout, username }) => {
