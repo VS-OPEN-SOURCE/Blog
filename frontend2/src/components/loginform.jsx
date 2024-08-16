@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import Button from './button';
+import Button from './Button';
 
 const Navbar = () => {
   const [user, setUser] = useState(null);
